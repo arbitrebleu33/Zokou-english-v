@@ -2,7 +2,7 @@ const { zokou } = require('../framework/zokou');
 
 zokou(
     {
-        nomCom: ' zenitsu.stat ',
+        nomCom: ' zenitsustat ',
         categorie: 'Maestria rpverse'
     },
     async (dest, zk, commandeOptions) => {
