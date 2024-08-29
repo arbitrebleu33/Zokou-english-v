@@ -69,3 +69,40 @@ DATE DE TRANSACTION📆:
         }
     }
 );
+zokou(
+    {
+        nomCom: 'regle',
+        categorie: 'Maestria rpverse'
+    },
+    async (dest, zk, commandeOptions) => {
+        const { repondre, arg, ms } = commandeOptions;
+
+        if (!arg || arg.length === 0)  {
+            const lien = '  https://telegra.ph/file/9a1c19808b8b4e6bcf636.jpg';
+            const msg = `  joueur1👤🏵 :
+══════════════════
+stamina 🫀: 100🫀
+PV❤ : 1000❤
+ZENEN🌀 : 3000🌀
+░░░░░░░░░░░░░░░░░░
+joueur 2👤🏵 :
+══════════════════
+stamina 🫀: 100🫀
+PV❤ : 1000❤
+ZENEN🌀 : 3000🌀
+░░░░░░░░░░░░░░░░░░░
+Distance 10m🔵
+Portee 7m🔮🧿
+nombre de tour : 8TRS🪬
+Latence 7min + 1⚠
+
+RV: uniquement en cas d'assurance absolue sinon risque de pénalité ☯
+══════════════════
+Respect mutuelle de l'arbitre (modérateur) et de son adversaire🛑
+interdit de discuter unitilement dans les arènes lors d'un combat sinon pénalités
+░░░░░░░░░░░░░░░  `;
+            zk.sendMessage(dest, { image: { url: lien }, caption: msg }, { quoted: ms });
+   
+        }
+    }
+);
